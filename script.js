@@ -25,7 +25,7 @@ document.getElementById("tall2").value = tall2
 document.getElementById("button").addEventListener
 ("click", function () {
     if (tall1 == tall2) {
-        document.getElementById("textArea").value = tall1 + " er det samme som " + tall2
+        document.getElementById("textArea").value = tall1 + " er lik  " + tall2
     } else if (tall1 > tall2) {
         document.getElementById("textArea").value = tall1 + " er større enn " + tall2
     } else {
@@ -48,14 +48,29 @@ document.getElementById("palindromEllerIkke").addEventListener("click", function
 
 // Oppgave 4
 
+let red = 0
+let blue = 0
+
 document.getElementById("red").addEventListener
 ("click", function () {
-    document.getElementById("div1").style.backgroundColor = "red"
+    if (red == 0) {
+        document.getElementById("div1").style.backgroundColor = "red"
+        red = 1
+    } else if (red == 1) {
+        document.getElementById("div1").style.backgroundColor = "white"
+        red = 0
+    }
 })
 
 document.getElementById("blue").addEventListener
 ("click", function () {
-    document.getElementById("div2").style.backgroundColor = "blue"
+    if (blue == 0) {
+        document.getElementById("div2").style.backgroundColor = "blue"
+        blue = 1
+    } else if (blue == 1) {
+        document.getElementById("div2").style.backgroundColor = "white"
+        blue = 0
+    }
 })
 
 document.getElementById("random").addEventListener
